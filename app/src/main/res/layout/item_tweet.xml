@@ -61,5 +61,17 @@
         app:layout_constraintTop_toBottomOf="@+id/twitterBody"
         tools:layout_editor_absoluteX="0dp" />
 
+    <TextView
+        android:id="@+id/tweetTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="7m"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/twitterBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

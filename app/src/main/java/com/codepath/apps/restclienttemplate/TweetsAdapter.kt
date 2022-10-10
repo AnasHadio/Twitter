@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.codepath.apps.restclienttemplate.TimeFormatter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.codepath.apps.restclienttemplate.models.Tweet
@@ -26,6 +27,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetsA
 
         holder.twitterUsername.text = tweet.user?.name
         holder.tweetBody.text = tweet.body
+        holder.tweetTime.text = tweet.getFormattedTimestamp()
 
         Glide.with(holder.itemView)
             .load(tweet.user?.publicImageURL)
@@ -54,6 +56,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetsA
         val profileImage = itemView.findViewById<ImageView>(R.id.profileImage)
         val twitterUsername = itemView.findViewById<TextView>(R.id.twitterUsername)
         val tweetBody = itemView.findViewById<TextView>(R.id.twitterBody)
+        val tweetTime = itemView.findViewById<TextView>(R.id.tweetTime)
     }
 
 }
